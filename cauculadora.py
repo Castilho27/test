@@ -19,12 +19,11 @@ def calcular():
 def limpar():
     entrada.delete(0, tk.END)
 
-# Interface da calculadora (em uma função para usar com __main__)
 def iniciar_calculadora():
     global entrada
     janela = tk.Tk()
     janela.title("Calculadora Bonita")
-    janela.geometry("320x450")
+    janela.geometry("320x500")
     janela.configure(bg="#f0f4f7")
     janela.resizable(False, False)
 
@@ -61,16 +60,27 @@ def iniciar_calculadora():
                 cmd = calcular
             else:
                 cmd = lambda x=botao: clicar_botao(x)
-            ttk.Button(frame_linha, text=botao, command=cmd).pack(side="left", expand=True, fill="both", padx=3, pady=3)
+            ttk.Button(frame_linha, text=botao, command=cmd).pack(
+                side="left",
+                expand=True,
+                fill="both",
+                padx=3,
+                pady=3
+            )
 
     # Botão limpar
     frame_limpar = ttk.Frame(janela)
     frame_limpar.pack(expand=True, fill="both", padx=10, pady=10)
-    ttk.Button(frame_limpar, text="C", command=limpar).pack(side="left", expand=True, fill="both")
+    ttk.Button(frame_limpar, text="C", command=limpar).pack(
+        side="left",
+        expand=True,
+        fill="both",
+        padx=3,
+        pady=3
+    )
 
     janela.mainloop()
 
-# Ponto de entrada
 if __name__ == "__main__":
     iniciar_calculadora()
 
