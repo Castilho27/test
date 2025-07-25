@@ -1,12 +1,12 @@
 import tkinter as tk
+from tkinter import ttk
 
-# Função para atualizar o texto no display
+# Funções da calculadora
 def clicar_botao(valor):
     entrada_atual = entrada.get()
     entrada.delete(0, tk.END)
     entrada.insert(0, entrada_atual + str(valor))
 
-# Função para calcular o resultado
 def calcular():
     try:
         resultado = eval(entrada.get())
@@ -16,19 +16,32 @@ def calcular():
         entrada.delete(0, tk.END)
         entrada.insert(0, "Erro")
 
-# Função para limpar o display
 def limpar():
     entrada.delete(0, tk.END)
 
-# Criando a janela principal
+# Janela principal
 janela = tk.Tk()
-janela.title("Calculadora")
-janela.geometry("300x400")
+janela.title("Calculadora Bonita")
+janela.geometry("320x450")
+janela.configure(bg="#f0f4f7")
 janela.resizable(False, False)
 
+# Estilo com ttk
+style = ttk.Style(janela)
+style.theme_use("clam")  # Tema mais moderno
+
+style.configure("TButton",
+                font=("Segoe UI", 16),
+                padding=10,
+                relief="flat",
+                background="#ffffff",
+                foreground="#333333")
+style.map("TButton",
+          background=[("active", "#d9e2ec")])
+
 # Campo de entrada
-entrada = tk.Entry(janela, font=("Arial", 24), borderwidth=5, relief="ridge", justify="right")
-entrada.pack(pady=20, padx=10, fill='x')
+entrada = ttk.Entry(janela, font=("Segoe UI", 24), justify="right")
+entrada.pack(padx=15, pady=20, fill="x")
 
 # Grade de botões
 botoes = [
@@ -38,21 +51,20 @@ botoes = [
     ['0', '.', '=', '+']
 ]
 
-# Criando os botões
 for linha in botoes:
-    frame_linha = tk.Frame(janela)
-    frame_linha.pack(expand=True, fill="both")
+    frame_linha = ttk.Frame(janela)
+    frame_linha.pack(expand=True, fill="both", padx=10, pady=5)
     for botao in linha:
         if botao == '=':
             cmd = calcular
         else:
             cmd = lambda x=botao: clicar_botao(x)
-        tk.Button(frame_linha, text=botao, font=("Arial", 18), command=cmd, height=2, width=5).pack(side="left", expand=True, fill="both")
+        ttk.Button(frame_linha, text=botao, command=cmd).pack(side="left", expand=True, fill="both", padx=3, pady=3)
 
-# Botão de limpar
-botao_limpar = tk.Button(janela, text="C", font=("Arial", 18), command=limpar, bg="#f44336", fg="white", height=2)
-botao_limpar.pack(expand=True, fill="both", padx=10, pady=10)
+# Botão limpar
+frame_limpar = ttk.Frame(janela)
+frame_limpar.pack(expand=True, fill="both", padx=10, pady=10)
+ttk.Button(frame_limpar, text="C", command=limpar).pack(side="left", expand=True, fill="both")
 
-# Iniciar o loop da interface
+# Iniciar a interface
 janela.mainloop()
-
