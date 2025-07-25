@@ -1,36 +1,58 @@
-def somar(a, b):
-    return a + b
+import tkinter as tk
 
-def subtrair(a, b):
-    return a - b
+# Função para atualizar o texto no display
+def clicar_botao(valor):
+    entrada_atual = entrada.get()
+    entrada.delete(0, tk.END)
+    entrada.insert(0, entrada_atual + str(valor))
 
-def multiplicar(a, b):
-    return a * b
+# Função para calcular o resultado
+def calcular():
+    try:
+        resultado = eval(entrada.get())
+        entrada.delete(0, tk.END)
+        entrada.insert(0, str(resultado))
+    except:
+        entrada.delete(0, tk.END)
+        entrada.insert(0, "Erro")
 
-def dividir(a, b):
-    if b == 0:
-        return "Erro: divisão por zero!"
-    return a / b
+# Função para limpar o display
+def limpar():
+    entrada.delete(0, tk.END)
 
-print("Calculadora Simples")
-print("Escolha a operação:")
-print("1 - Soma")
-print("2 - Subtração")
-print("3 - Multiplicação")
-print("4 - Divisão")
+# Criando a janela principal
+janela = tk.Tk()
+janela.title("Calculadora")
+janela.geometry("300x400")
+janela.resizable(False, False)
 
-opcao = input("Digite o número da operação desejada: ")
+# Campo de entrada
+entrada = tk.Entry(janela, font=("Arial", 24), borderwidth=5, relief="ridge", justify="right")
+entrada.pack(pady=20, padx=10, fill='x')
 
-num1 = float(input("Digite o primeiro número: "))
-num2 = float(input("Digite o segundo número: "))
+# Grade de botões
+botoes = [
+    ['7', '8', '9', '/'],
+    ['4', '5', '6', '*'],
+    ['1', '2', '3', '-'],
+    ['0', '.', '=', '+']
+]
 
-if opcao == "1":
-    print("Resultado:", somar(num1, num2))
-elif opcao == "2":
-    print("Resultado:", subtrair(num1, num2))
-elif opcao == "3":
-    print("Resultado:", multiplicar(num1, num2))
-elif opcao == "4":
-    print("Resultado:", dividir(num1, num2))
-else:
-    print("Opção inválida.")
+# Criando os botões
+for linha in botoes:
+    frame_linha = tk.Frame(janela)
+    frame_linha.pack(expand=True, fill="both")
+    for botao in linha:
+        if botao == '=':
+            cmd = calcular
+        else:
+            cmd = lambda x=botao: clicar_botao(x)
+        tk.Button(frame_linha, text=botao, font=("Arial", 18), command=cmd, height=2, width=5).pack(side="left", expand=True, fill="both")
+
+# Botão de limpar
+botao_limpar = tk.Button(janela, text="C", font=("Arial", 18), command=limpar, bg="#f44336", fg="white", height=2)
+botao_limpar.pack(expand=True, fill="both", padx=10, pady=10)
+
+# Iniciar o loop da interface
+janela.mainloop()
+
