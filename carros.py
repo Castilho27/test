@@ -1,11 +1,14 @@
-import numpy as np # linear algebra
-import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
+import numpy as np
+import pandas as pd
 import matplotlib
-%matplotlib inline
 import matplotlib.pyplot as plt
-
 import os
-print(os.listdir("../input/"))
 
-df=pd.read_csv('../input/brazil-car-sales-records-from-1990-to-2022/dados.csv')
-df.head()
+# Mostra os arquivos dentro da pasta Dados
+print(os.listdir("Dados"))
+
+# Lê o arquivo CSV corretamente
+df = pd.read_csv('Dados/dados.csv', encoding='latin1')
+
+# Mostra as primeiras 5 linhas
+print(df.head())
