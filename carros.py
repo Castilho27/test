@@ -12,3 +12,13 @@ df = pd.read_csv('Dados/dados.csv', encoding='latin1')
 
 # Mostra as primeiras 5 linhas
 print(df.head())
+
+plt.figure(figsize=(12,6))
+plt.plot(df['Date'], df['Value'], label='Vendas de Carros', color='blue')
+plt.title('Vendas de Carros no Brasil (1990–2022)')
+plt.xlabel('Data')
+plt.ylabel('Número de Carros Vendidos')
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()
