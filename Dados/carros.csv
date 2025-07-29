@@ -1,0 +1,67 @@
+import pandas as pd
+
+dados = [
+    ['Fiat', 'Strada', 144684],
+    ['Volkswagen', 'Polo', 140177],
+    ['Chevrolet', 'Onix', 97503],
+    ['Hyundai', 'HB20', 97079],
+    ['Fiat', 'Argo', 91139],
+    ['Volkswagen', 'T-Cross', 83990],
+    ['Chevrolet', 'Tracker', 69431],
+    ['Hyundai', 'Creta', 69116],
+    ['Fiat', 'Mobi', 67382],
+    ['Nissan', 'Kicks', 60455],
+    ['Chevrolet', 'Onix Plus', 59960],
+    ['Renault', 'Kwid', 57241],
+    ['Volkswagen', 'Saveiro', 56984],
+    ['Volkswagen', 'Nivus', 55924],
+    ['Jeep', 'Renegade', 53896],
+    ['Fiat', 'Toro', 53856],
+    ['Honda', 'HR‑V', 50385],
+    ['Jeep', 'Compass', 50055],
+    ['Toyota', 'Hilux', 50010],
+    ['Fiat', 'Fastback', 48246],
+    ['Toyota', 'Corolla Cross', 47796],
+    ['Fiat', 'Cronos', 44392],
+    ['Fiat', 'Pulse', 39079],
+    ['Toyota', 'Corolla', 37668],
+    ['Hyundai', 'HB20S', 37337],
+    ['Volkswagen', 'Virtus', 32366],
+    ['Ford', 'Ranger', 31860],
+    ['Caoa Chery', 'Tiggo 7', 30896],
+    ['Chevrolet', 'Montana', 27724],
+    ['Chevrolet', 'S10', 27402],
+    ['Toyota', 'Yaris', 25964],
+    ['Chevrolet', 'Spin', 24953],
+    ['Renault', 'Kardian', 24447],
+    ['Ram', 'Rampage', 23619],
+    ['BYD', 'Dolphin Mini', 21946],
+    ['Toyota', 'Yaris Sedan', 21934],
+    ['Citroën', 'C3', 21080],
+    ['Renault', 'Duster', 20702],
+    ['Fiat', 'Fiorino', 20208],
+    ['Caoa Chery', 'Tiggo 5X', 20159],
+    ['BYD', 'Song Plus', 18033],
+    ['GWM', 'Haval H6', 17912],
+    ['Peugeot', '208', 17709],
+    ['Toyota', 'SW4', 17815],
+    ['Volkswagen', 'Taos', 17569],
+    ['Jeep', 'Commander', 16745],
+    ['Honda', 'City', 16368],
+    ['Honda', 'City Hatch', 15473],
+    ['BYD', 'Dolphin', 15201],
+    ['Renault', 'Oroch', 12883]
+]
+
+df = pd.DataFrame(dados, columns=['Marca', 'Modelo', 'Quantidade'])
+df.to_csv('Dados/carros.csv', index=False, encoding='utf-8')
+print("Arquivo 'carros.csv' criado com sucesso!")
+GWM,Haval H6,17912
+Peugeot,208,17709
+Toyota,SW4,17815
+Volkswagen,Taos,17569
+Jeep,Commander,16745
+Honda,City,16368
+Honda,City Hatch,15473
+BYD,Dolphin,15201
+Renault,Oroch,12883
