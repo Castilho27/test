@@ -9,37 +9,53 @@ df = pd.read_csv('Dados/dados.csv', encoding='latin1')
 # Converte a data
 df['Date'] = pd.to_datetime(df['Date'].str.replace(',', '/'), format='%d/%m/%Y')
 
-# Define o estilo seaborn para o fundo
+# Define estilo do seaborn e remove bordas
 sns.set_style('whitegrid')
+plt.rcParams['font.family'] = 'sans-serif'
+plt.rcParams['axes.spines.top'] = False
+plt.rcParams['axes.spines.right'] = False
 
-plt.figure(figsize=(16, 7))
+# Cria a figura
+plt.figure(figsize=(16, 8))
 
-# Plota a linha com pontos e estilo mais elegante
-plt.plot(df['Date'], df['Value'], 
-         label='Vendas de Carros', 
-         color='#1f77b4',       # Azul moderno
-         linewidth=2.5,         # Linha mais grossa
-         marker='o',            # Pontos nos dados
-         markersize=6, 
-         markerfacecolor='white', 
-         markeredgewidth=1.5,
-         markeredgecolor='#1f77b4')
+# Cor principal
+cor_linha = '#007ACC'
 
-# Títulos e legendas com fontes maiores
-plt.title('Vendas de Carros no Brasil (1990–2022)', fontsize=18, fontweight='bold')
+# Linha e sombreamento
+plt.plot(df['Date'], df['Value'], color=cor_linha, linewidth=2.8, label='Vendas de Carros')
+plt.fill_between(df['Date'], df['Value'], color=cor_linha, alpha=0.1)
+
+# Destaques: Máximo e mínimo
+max_val = df.loc[df['Value'].idxmax()]
+min_val = df.loc[df['Value'].idxmin()]
+
+plt.scatter([max_val['Date']], [max_val['Value']], color='red', zorder=5)
+plt.scatter([min_val['Date']], [min_val['Value']], color='green', zorder=5)
+
+plt.text(max_val['Date'], max_val['Value'], f'Máx: {int(max_val["Value"]):,}', 
+         fontsize=11, color='red', ha='left', va='bottom')
+plt.text(min_val['Date'], min_val['Value'], f'Mín: {int(min_val["Value"]):,}', 
+         fontsize=11, color='green', ha='left', va='top')
+
+# Títulos e rótulos
+plt.title('Vendas de Carros no Brasil (1990–2022)', fontsize=20, fontweight='bold', color='#333333')
 plt.xlabel('Ano', fontsize=14)
 plt.ylabel('Número de Carros Vendidos', fontsize=14)
-plt.legend(fontsize=12)
 
-# Ajusta o eixo X
+# Eixo X mais limpo e rotacionado
 ax = plt.gca()
-ax.xaxis.set_major_locator(mdates.YearLocator(2))  # Marca a cada 2 anos
+ax.xaxis.set_major_locator(mdates.YearLocator(2))
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
 plt.xticks(rotation=45, fontsize=12)
 plt.yticks(fontsize=12)
 
-# Grid mais suave
-plt.grid(alpha=0.3)
+# Grid mais sutil
+plt.grid(alpha=0.25)
 
+# Legenda elegante
+plt.legend(fontsize=13, loc='upper left', frameon=False)
+
+# Layout final
 plt.tight_layout()
 plt.show()
+
