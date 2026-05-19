@@ -12,13 +12,16 @@
 
 ---
 
-## 📋 Sobre o Projeto
+### 📋 Sobre o Projeto
+
+<br>
 
 O **Aquality** é um software de monitoramento inteligente de hidratação corporal, desenvolvido especificamente para otimizar a performance e a segurança de atletas de alto rendimento. 
 
 Nascido de uma cooperação tecnológica e científica entre a **Hospital São Camilo** e o **Instituto Mauá de Tecnologia (IMT)**, o sistema une a expertise da saúde com a excelência em engenharia e desenvolvimento de software.
 
 </div>
+<br>
 
 ### 🚀 Como Funciona?
 A plataforma centraliza dados fisiológicos e níveis de hidratação em tempo real, permitindo que comissões técnicas compostas por treinadores, médicos e nutricionistas atuem de forma integrada e estratégica sobre o desempenho dos atletas. Além disso, a solução conta com mecanismos de inteligência artificial, utilizando um agente treinado para gerar análises, insights e recomendações inteligentes com base em evidências, proporcionando tomadas de decisão mais rápidas, precisas e eficazes.
@@ -57,7 +60,7 @@ exibida no terminal (ex: http://localhost:5173 ou http://localhost:3000).
 ```
 <br> 
 
-⚙️ 2. Inicializar o Back-end Web
+#### ⚙️ 2. Inicializar o Back-end Web
 Passo A: Configuração do Banco de Dados
 Abra o seu MySQL Workbench (ou gerenciador de banco de dados de sua preferência) e execute o seguinte comando para criar o banco de dados do projeto:
 
@@ -84,5 +87,13 @@ No Windows (Prompt de Comando ou PowerShell):
 ```DOS
 mvnw spring-boot:run
 ```
-Desenvolvido por 
+## Agora você já pode acompanhar nosso projeto e todas as atualizações, nos apoie e transforme a hidratação dos atletas para sempre junto conosco! 💧
+
+---
+
+Desenvolvido por **Equipe Aquality Company**  
+Todos os direitos autorais reservados para **Instituto Mauá de Tecnologia ®️** 
+
+<br>
+<br>
 
