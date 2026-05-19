@@ -1,4 +1,4 @@
-# 🏆 Hydra Sense - Monitoramento Inteligente de Hidratação
+# 💦 Aquality - Monitoramento Inteligente de Hidratação
 
 <br><br>
 
