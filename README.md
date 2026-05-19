@@ -5,9 +5,9 @@
 [![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+<br>
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=spring-boot&logoColor=white)](https://spring.io/projects/spring-boot)
 [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/)
-<br>
 [![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)](https://git-scm.com/)
 
 ---
@@ -16,18 +16,18 @@
 
 O **Aquality** é um software de monitoramento inteligente de hidratação corporal, desenvolvido especificamente para otimizar a performance e a segurança de atletas de alto rendimento. 
 
-Nascido de uma cooperação tecnológica e científica entre a **Centro Universitário São Camilo** e o **Instituto Mauá de Tecnologia (IMT)**, o sistema une a expertise da saúde com a excelência em engenharia e desenvolvimento de software.
+Nascido de uma cooperação tecnológica e científica entre a **Hospital São Camilo** e o **Instituto Mauá de Tecnologia (IMT)**, o sistema une a expertise da saúde com a excelência em engenharia e desenvolvimento de software.
 
 </div>
 
 ### 🚀 Como Funciona?
-A plataforma centraliza dados fisiológicos cruciais e níveis de hidratação em tempo real. Isso permite que comissões técnicas — compostas por treinadores, médicos e nutricionistas — tenham acesso a métricas precisas e baseadas em evidências para tomadas de decisão rápidas e eficazes.
+A plataforma centraliza dados fisiológicos e níveis de hidratação em tempo real, permitindo que comissões técnicas compostas por treinadores, médicos e nutricionistas atuem de forma integrada e estratégica sobre o desempenho dos atletas. Além disso, a solução conta com mecanismos de inteligência artificial, utilizando um agente treinado para gerar análises, insights e recomendações inteligentes com base em evidências, proporcionando tomadas de decisão mais rápidas, precisas e eficazes.
 
 ### 🎯 Diferenciais Estratégicos
 Mais do que um simples painel de visualização, o **Aquality** atua como uma ferramenta preditiva e estratégica que proporciona:
-* **Recomendações Personalizadas:** Ajustes individuais de hidratação de acordo com a demanda de cada atleta.
-* **Prevenção de Fadiga:** Mitigação da queda de rendimento físico causada pela desidratação.
-* **Redução de Riscos à Saúde:** Monitoramento ativo para evitar quadros severos de estresse térmico e desequilíbrio eletrolítico.
+* **Recomendações Inteligentes com IA:** Ajustes personalizados de hidratação com base no perfil, desempenho e demanda física de cada atleta, utilizando inteligência artificial para gerar insights, alertas e sugestões em tempo real.
+* **Prevenção de Fadiga e Monitoramento Integrado:** Com uma interface intuitiva e colaborativa, diferentes profissionais podem acompanhar e atuar diretamente no desempenho do mesmo atleta, centralizando informações importantes para tomadas de decisão mais eficientes, produtivas e estratégicas.
+* **Redução de Riscos à Saúde:** Monitoramento inteligente e contínuo para auxiliar na prevenção de estresse térmico, desidratação e desequilíbrios eletrolíticos, promovendo mais segurança, desempenho e bem-estar aos atletas.
 
 ---
 
