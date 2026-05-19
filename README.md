@@ -1,5 +1,3 @@
-## 💦 Aquality - Monitoramento Inteligente de Hidratação
-
 <div align="center">
 <a href="https://ibb.co/ZRgbgC7v"><img src="https://i.ibb.co/LDgsgfHB/Plus-AB.png" alt="Plus-AB" border="0"></a>
 <br><br>
