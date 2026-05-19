@@ -4,7 +4,7 @@
 
 <div align="center">
 
-<img src="https://microambiental.com.br/wp-content/uploads/2024/10/logo-hospital-sao-camilo-microambiental.png" alt="Logo São Camilo Microambiental" width="300"/>
+<a href="https://ibb.co/ZRgbgC7v"><img src="https://i.ibb.co/LDgsgfHB/Plus-AB.png" alt="Plus-AB" border="0"></a>
 
 <br><br>
 
