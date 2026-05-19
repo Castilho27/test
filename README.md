@@ -49,9 +49,11 @@ npm install
 
 # Inicie o servidor de desenvolvimento
 npm run dev
-(Nota: Caso o script do seu package.json utilize a nomenclatura tradicional do React, você também pode tentar npm run start se o comando acima não funcionar).
+(Nota: Caso o script do seu package.json utilize a nomenclatura tradicional do React, 
+você também pode tentar npm run start se o comando acima não funcionar).
 
-Após inicializar, conecte-se à porta local disponível exibida no terminal (ex: http://localhost:5173 ou http://localhost:3000).
+Após inicializar, conecte-se à porta local disponível 
+exibida no terminal (ex: http://localhost:5173 ou http://localhost:3000).
 ```
 <br> 
 
@@ -62,9 +64,9 @@ Abra o seu MySQL Workbench (ou gerenciador de banco de dados de sua preferência
 
 ```SQL
 CREATE DATABASE hydrasense;
+```
 Passo B: Executar a Aplicação Spring Boot
 Abra um novo terminal na raiz do projeto back-end:
-```
 
 
 ```Bash
@@ -76,9 +78,8 @@ Em seguida, execute o comando correspondente ao seu sistema operacional para rod
 No Linux / macOS:
 ```Bash
 ./mvnw spring-boot:run
-No Windows (Prompt de Comando ou PowerShell):
 ```
-
+No Windows (Prompt de Comando ou PowerShell):
 
 ```DOS
 mvnw spring-boot:run
